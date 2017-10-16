@@ -1,6 +1,5 @@
-﻿Creating a trial Microsoft Azure account and activating MSDN benefits
-===================================================================
-
+﻿Creating a Trial Microsoft Azure Account and Activating MSDN Benefits
+=====================================================================
 What is Azure? In short, it’s Microsoft’s cloud platform: a growing collection of integrated services —compute, storage, data, networking, and apps— that help you move faster, do more, and save money. You can build infrastructure, develop modern applications, gain insights from data, manage identity and access and more.
 
 In this lab you will create a free trial Microsoft Azure account, and you will activate the benefits available to MSDN subscribers.

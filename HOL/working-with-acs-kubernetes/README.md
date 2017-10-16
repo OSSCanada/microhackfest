@@ -1,5 +1,5 @@
-# Working with ACS Kubernetes #
-
+Working with ACS Kubernetes
+===========================
 This lab shows how to create a Kubernetes Cluster in Azure using Azure Container Service (ACS).
 
 This lab includes the following sections:

@@ -1,5 +1,5 @@
-# Getting started with Azure Functions
-
+Working with Azure Functions and Cognitive Services
+===================================================
 This lab shows how to create an Azure Function, expose it as an API and consume it.
 
 This lab includes the following sections:
@@ -297,5 +297,4 @@ This quickstart demonstrates a simple execution of a basic HTTP-triggered functi
 * [What is Azure App Service?](https://docs.microsoft.com/en-us/azure/app-service/app-service-value-prop-what-is) Azure Functions uses the Azure App Service platform for core functionality like deployments, environment variables, and diagnostics.
 
 ## Summary
-
 In this lab you have seen how to create an Azure Function, how to trigger Functions, how to test them and how to connect them to other Azure Services.

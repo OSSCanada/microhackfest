@@ -1,9 +1,8 @@
-﻿# Introduction to Microsoft Azure #
-
+﻿# Microservices, Serverless and Containers Hackfest HOLs #
 In these labs you will be introduced to how to build Microservices Applications using Serverless and Containers technology. Specifically Azure Web App for Containers, Azure Functions and Azure Container Service w/Kubernetes.
 
-#### [Lab 1 - Setup](_setup) ####
-##### Setting up your environment for the labs #####
+#### [Lab 1 - Setup](setup) ####
+##### Setting up your environment for the Labs #####
 
 In this lab you will find the prerequisites and steps to help you set up your computer. After completing the lab you will have a working environment ready for the other labs.
 

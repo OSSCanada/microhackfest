@@ -1,6 +1,5 @@
 ﻿Working with Web App for Containers
 ===================================
-
 In this lab you will be workign with Web App for Containers which is one of the easiest ways to get started with building Web or REST-based APIs with Containers.
 
 This lab shows how to create an Azure Function, expose it as an API and consume it.
