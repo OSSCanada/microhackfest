@@ -4,7 +4,7 @@ metadata:
   name: my-svc
 spec:
   selector:
-    app: my-app
+    app: <APP_NAME_GOES_HERE>
   ports:
   - protocol: TCP
     port: 8080
