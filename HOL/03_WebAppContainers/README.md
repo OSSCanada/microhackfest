@@ -8,7 +8,7 @@ In this lab you will be working with Web App for Containers which is one of the 
     * ``kevingbb/bobble`` from Docker Hub
 2. Deploy Container via CLI
     * ``kevingbb/bobble`` from Docker Hub
-    * az appservice plan ... hint: don't forget --is-linux flag
+    * az appservice plan ... **hint:** don't forget --is-linux flag
     * az webapp config
 3. Deploy App via Git
     * Create new Web App using same App Service Plan
@@ -27,6 +27,6 @@ In this lab you will be working with Web App for Containers which is one of the 
 
 1. Deploy Custom Container from Private Registry
 2. Add SSH access to custom Container via Kudu
-    ``Hint:`` Need to install SSH via Dockerfile and setup with a specific user
+    **Hint:** Need to install SSH via Dockerfile and setup with a specific user
 3. Implement Continuous Integration
-    ``Hint:`` Leverage Blade in Portal
+    **Hint:** Leverage Blade in Portal

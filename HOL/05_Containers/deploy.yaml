@@ -16,7 +16,7 @@ spec:
   template:
     metadata:
       labels:
-        app: my-app
+        app: <APP_NAME_GOES_HERE>
     spec:
       containers:
       - name: my-ctr2

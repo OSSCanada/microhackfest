@@ -10,6 +10,11 @@ In this lab you will find the prerequisites and steps to help you set up your co
 
 To run these labs, **Azure CLI 2.0** is required. It can be downloaded and installed from [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
 
+Check Azure CLI is working:
+```bash
+az --version
+```
+
 ### Install Visual Studio Code
 
 To run these labs, **Visual Studio Code** is required. It can be downloaded and installed from [here](https://code.visualstudio.com).
@@ -18,10 +23,43 @@ To run these labs, **Visual Studio Code** is required. It can be downloaded and 
 
 It should install as part of VS Code, but in case not install it from [here](https://git-scm.com).
 
+Check git is working:
+```bash
+git --version
+```
+
+### Create Docker Build Machine
+
+We will use the ```docker-machine``` command to provision a VM to Azure and install the Docker engine on to it.  This remote Docker host will be used to pull and push container images to a registry and build custom images from.  We do this by configuring our local Docker Environment variablesto "point to" the remote Docker host.  This will allow us to run Docker commands from our local terminal, but the commands will actually execute remotely on the Docker host.
+
+```bash
+# Not needed for cloud shell - you're already logged in.
+az login
+
+az group create \
+    --name docker-build-<alias>-rg
+    --location canadacentral
+
+az account list
+
+docker-machine create \
+    --driver azure \
+    --azure-subscription-id <subscription_id> \
+    --azure-image  "Canonical:UbuntuServer:14.04.5-LTS:latest" \
+    --azure-size "Standard_D2_v2" \
+    --azure-resource-group docker-machine-<alias>-rg \
+    --azure-location canadacentral \
+    docker-machine-<alias>
+
+eval $(docker-machine env docker-machine-<alias>)
+```
+
+Check docker is working: Click [here](https://docs.docker.com/docker-for-mac/) for Mac OSX. Click [here](https://docs.docker.com/docker-for-windows/) for Windows.
+
 ### Clone or download content of this GitHub repository (optional but recommended)
 
-The labs provided have a combination of text documentation and sample code. In order to have all documentation and all necessary sample files locally on your computer, we strongly recommend you to clone (using [Git](http://git-scm.com/)) or [download](https://github.com/kevingbb/AppService-Day/archive/master.zip) all content in this repository locally on your computer. If you download the zip archive, you will need to [unblock](http://blogs.msdn.com/b/delay/p/unblockingdownloadedfile.aspx) the zip file before extracting it.
+The labs provided have a combination of text documentation and sample code. In order to have all documentation and all necessary sample files locally on your computer, we strongly recommend you to clone the repo.
 
 ## Summary
 
-You have the latest version of Azure CLI, Visual Studio Code and Git installed on your computer.
+You have the latest version of Azure CLI, Visual Studio Code and Git installed on your computer along with a Docker Build Machine in Azure.
