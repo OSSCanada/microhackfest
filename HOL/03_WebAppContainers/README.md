@@ -2,15 +2,17 @@
 
 In this lab you will be working with Web App for Containers which is one of the easiest ways to get started with building Web or REST-based APIs with Containers.
 
-## How To:
+## Deployment Methods:
 
-1. Deploy Container via Portal
+### 1. Deploy Container via Portal
     * ``kevingbb/bobble`` from Docker Hub
-2. Deploy Container via CLI
+
+### 2. Deploy Container via CLI
     * ``kevingbb/bobble`` from Docker Hub
     * az appservice plan ... hint: don't forget --is-linux flag
     * az webapp config
-3. Deploy App via Git
+
+### 3. Directly with Git
     * Create new Web App using same App Service Plan
     * Create new local web application using dotnet Core or Node or Python
     * Create local Git Repo
@@ -20,7 +22,13 @@ In this lab you will be working with Web App for Containers which is one of the 
     * Push local Git Repo to Web App
         git remote add ...
         git push ...
-4. SSH into Container
+
+### 4. Private Registray (Azure Container Registry - ACR)
+    
+
+## Troubleshooting
+
+1. Kudu and SSH
 
 
 ## Advanced:
