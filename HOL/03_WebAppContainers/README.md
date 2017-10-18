@@ -9,7 +9,7 @@ In this lab you will be working with Web App for Containers which is one of the 
 
 ### 2. Deploy Container via CLI
 - pull in ``kevingbb/bobble`` from Docker Hub (public image)
-- create a new app service plan ```az appservice plan``` ... note: don't forget --is-linux flag
+- create a new app service plan ```az appservice plan``` ... note: don't forget ```--is-linux``` flag
 - now configure the app ```az webapp config```
 
 ### 3. Directly with Git
