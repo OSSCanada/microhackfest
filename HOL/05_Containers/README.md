@@ -70,3 +70,17 @@ kubectl delete deploy azure-vote-front
 1. Combine the deployment Manifest and the Service Manifest into a single file and deploy to a new Namespace
 2. Add ACI Node to existing K8s Cluster and run a workload on it.
 3. Replace LoadBalancer setup in yaml file with Ingress Controller.
+
+## Troubleshooting
+
+### Unable to connect to your cluster:
+- Some versions of Azure-CLI will not pull down your kube config file properly
+- you must pull it down manually:
+
+```:bash
+# go to your ~/.kube folder
+cd ~/.kube
+
+# copy the remote config file to your local ~/.kube folder
+scp -i /path/to/your/ssh/key <your_kube_user>@<kube_cluster_name>.<azure_location>.cloudapp.azure.com:~/.kube/config .
+```
