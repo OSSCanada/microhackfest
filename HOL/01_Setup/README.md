@@ -32,6 +32,8 @@ git --version
 
 Using **Azure Cloud Shell** in the browser, We will use the ```docker-machine``` command to provision a VM to Azure and install the Docker engine on to it.  [**Note:** Azure Cloud Shell provisions a terminal session in Azure with many tools already installed including Azure-CLI, Docker, Docker-Machine and others.]  
 
+![pull/tag/push](images/cloud_shell.png)
+
 This remote Docker host will be used to pull and push container images to a registry and build custom images from.  We do this by configuring our local Docker Environment variablesto "point to" the remote Docker host.  This will allow us to run Docker commands from our local terminal, but the commands will actually execute remotely on the Docker host.
 
 ```bash
