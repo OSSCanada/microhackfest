@@ -41,8 +41,8 @@ In this lab you will be working with Web App for Containers which is one of the 
 1. By default the ```docker``` command knows to ```pull``` from docker hub registry
 2. In order to ```push``` to your registry you must be logged in by running ```docker login <your-private-repo-url>```
     - ```docker login``` by itself will log you in to docker hub
-        - you must include a your private repo URL to authenticate against a privately hosted registry (like Azure Container Registry)
-    - after logging in your repo credentials will be cached
+        - you must include a URL to authenticate against a privately hosted registry (like Azure Container Registry)
+    - after logging into your registry, credentials are cached for future use
         - for Azure Container Registry your username is the same as ```<registry_name>```.azurecr.io
         - the password can be found in your Azure Container Registry Dashboard in the Azure Portal
 3. You can check your cached credentials in your ```.docker/config.json``` in your home folder
