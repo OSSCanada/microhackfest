@@ -63,7 +63,9 @@ docker-machine create \
 eval $(docker-machine env docker-machine-<alias> --shell bash)
 ```
 
-Install docker tools locally: Click [here](https://docs.docker.com/docker-for-mac/) for Mac OSX. Click [here](https://docs.docker.com/docker-for-windows/) for Windows.
+Install docker tools locally: 
+- Docker for [Mac](https://docs.docker.com/docker-for-mac/)
+- Docker for [Windows](https://docs.docker.com/docker-for-windows/)
 
 ### Create ACS Cluster
 
