@@ -30,12 +30,28 @@ In this lab you will be working with Web App for Containers which is one of the 
 ### 4. Private Registry (Azure Container Registry - ACR)
 - Create an Azure Container Registry (ACR)
 - Pull in a public image from docker hub
-- Re-tag the public image and namespace it to your private registry (hint: <your-private-registry>.azurecr.io)
+- Re-tag the public image and namespace it to your private registry (hint: ```<registry_name>.azurecr.io```)
 - Link your new ACR to your Web App for Containers Service (WACS)
     - You can do this in the portal or CLI
     - You can also enable Continuous Deployment when the ACR image is updated (pushed to ACR)
 
 ![pull/tag/push](images/docker_push_to_registry.png)
+
+#### Notes:
+1. By default the ```docker``` command knows to ```pull``` from docker hub registry
+2. In order to ```push``` to your registry you must be logged in by running ```docker login <your-private-repo-url>```
+    - ```docker login``` by itself will log you in to docker hub
+        - you must include a your private repo URL to authenticate against a privately hosted registry (like Azure Container Registry)
+    - after logging in your repo credentials will be cached
+        - for Azure Container Registry your username is the same as ```<registry_name>```.azurecr.io
+        - the password can be found in your Azure Container Registry Dashboard in the Azure Portal
+3. You can check your cached credentials in your ```.docker/config.json``` in your home folder
+    - you will see the registries your're logged into and can ```push``` to
+4. By tagging images with ```<registry_name>/<image_name>``` docker will resolve this name to the proper ```<registry_name>``` to push/pull to
+    - simple names like ```kevingbb/<image_name>``` are likely docker hub registries
+    - complex names like ```<registry_name>.azurecr.io/<image_name>``` are privately hosted registries (not docker hub)
+    
+
 
 ## Troubleshooting
 
