@@ -35,6 +35,8 @@ In this lab you will be working with Web App for Containers which is one of the 
     - You can do this in the portal or CLI
     - You can also enable Continuous Deployment when the ACR image is updated (pushed to ACR)
 
+![pull/tag/push](images/docker_push_to_registry.png)
+
 ## Troubleshooting
 
 Trouble shooting into the container is done through Kudu and the console Kudu provides.  This allows you to SSH into the container from Kudu web interface.  The container is otherwise inaccessible directly via SSH.
