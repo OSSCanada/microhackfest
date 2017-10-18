@@ -5,15 +5,16 @@ In this lab you will be working with Web App for Containers which is one of the 
 ## Deployment Methods:
 
 ### 1. Deploy Container via Portal
-- link to ``kevingbb/bobble`` from Docker Hub (public image)
+This method allows you to visually configure your Azure App Service to pull in ```kevingbb/bobble``` from Docker Hub (public image)
+- In the Azure Portal, navigate to your Web App you can configure/link/point to ``kevingbb/bobble`` from Docker Hub (public image)
 
 ### 2. Deploy Container via CLI
-- pull in ``kevingbb/bobble`` from Docker Hub (public image)
-- create a new app service plan ```az appservice plan``` ... note: don't forget ```--is-linux``` flag
-- now configure the app ```az webapp config```
+This method allows you to script and configure your Web App to pull in ``kevingbb/bobble`` from Docker Hub (public image)
+- Using Azure-CLI, create a new app service plan ```az appservice plan``` ... **Note:** Don't forget ```--is-linux``` flag
+- Now create the app ```az webapp create``` ***Note:*** Don't forget to specify a container image source ```-i``` flag
 
 ### 3. Directly with Git
-**Note:** This is ___not___ a contianer exercise, this is a different deployment mechanism.  This will not build/deploy an updated container, but rather will directly connect your Github repo to Azure App Services.  This is done through a webhook to Azure App Services, which will trigger Azure App Services to ```pull``` in the new code and reload your web app everytime you ```push``` new code to your repository, on a specified repo ```branch``` (usually ```master``` branch).
+This method is ___not___ a contianer exercise.  Rather this is a different deployment mechanism.  This will not build/deploy an updated container, but rather will directly connect your Github repo to Azure App Services.  This is done through a webhook to Azure App Services, which will trigger Azure App Services to ```pull``` in the new code and reload your web app everytime you ```push``` new code to your repository, on a specified repo ```branch``` (usually ```master``` branch).
 
 - Create new Web App using same App Service Plan
 - Create new local web application using dotnet Core or Node or Python
