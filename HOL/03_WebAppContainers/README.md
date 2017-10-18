@@ -14,7 +14,7 @@ This method allows you to script and configure your Web App to pull in ``kevingb
 - Now create the app ```az webapp create``` ***Note:*** Don't forget to specify a container image source ```-i``` flag
 
 ### 3. Directly with Git
-This method is ___not___ a contianer exercise.  Rather this is a different deployment mechanism.  This will not build/deploy an updated container, but rather will directly connect your Github repo to Azure App Services.  This is done through a webhook to Azure App Services, which will trigger Azure App Services to ```pull``` in the new code and reload your web app everytime you ```push``` new code to your repository, on a specified repo ```branch``` (usually ```master``` branch).
+This method is ___not___ a contianer exercise.  Rather this is a different deployment method.  This will not build/deploy an updated container, but rather will directly connect your Github repo to Azure App Services.  This is done through a webhook to Azure App Services, which will trigger Azure App Services to ```pull``` in the new code and reload your web app everytime you ```push``` new code to your repository, on a specified repo ```branch``` (usually ```master``` branch).
 
 - Create new Web App using same App Service Plan
 - Create new local web application using dotnet Core or Node or Python
