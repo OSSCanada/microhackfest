@@ -1,21 +1,16 @@
-// You must include a context, but other arguments are optional
-module.exports = function(context) {
-    
-};
-// or you can include additional inputs in your arguments
-module.exports = function(context) {
-    
+module.exports = function(context, myQueueItem) {
     var myItem = {
         PartitionKey: "key",
         RowKey: guid(),
-        Time: Date.Now.ToString("hh.mm.ss.ffffff"),
-        Msg: context.bindings.myQueueItem.Msg,
-        OriginalTime: context.bindings.myQueueItem.Time
+        Time: currentTime(),
+        Msg: myQueueItem.Msg,
+        OriginalTime: myQueueItem.Time
     }
     
-    console.log.verbose("JS Queue trigger function process: " + context.bindings.myQueueItem.Msg + " | " + context.bindings.myQueueItem.Time);
+    context.log("JS Queue trigger function process: " + myQueueItem.Msg + " | " + myQueueItem.Time);
+    context.bindings.outputTable = myItem;
 
-    context.done(null)
+    context.done()
 };
 
 // From https://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
@@ -27,4 +22,9 @@ function guid() {
   }
   return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
     s4() + '-' + s4() + s4() + s4();
+}
+
+function currentTime(){
+    var time = new Date();
+    return [time.getHours(), time.getMinutes(), time.getSeconds(), time.getMilliseconds()].join('.');
 }
