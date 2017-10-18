@@ -1,16 +1,18 @@
 using System;
 
-public static void Run(QItem myQueueItem, ICollector<TableItem> myTable, TraceWriter log)
+public static void Run(QItem myQueueItem, ICollector<TableItem> outputTable, TraceWriter log)
 {
-	TableItem myItem = new TableItem
-	{
-	  PartitionKey = "key",
-	  RowKey = Guid.NewGuid().ToString(),
-	  Time = DateTime.Now.ToString("hh.mm.ss.ffffff"),
-	  Msg = myQueueItem.Msg,
-	  OriginalTime = myQueueItem.Time    
-	};
-	log.Verbose($"C# Queue trigger function processed: {myQueueItem.Msg} | {myQueueItem.Time}");
+    TableItem row = new TableItem()
+    {
+		PartitionKey = "key",
+		RowKey = Guid.NewGuid().ToString(),
+		Time = DateTime.Now.ToString("hh.mm.ss.ffffff"),
+		Msg = myQueueItem.Msg,
+		OriginalTime = myQueueItem.Time    
+    };
+	outputTable.Add(row);
+
+	log.Verbose($"C# Queue trigger function processed: {row.RowKey} | {myQueueItem.Msg} | {myQueueItem.Time}");
 }
 
 public class TableItem

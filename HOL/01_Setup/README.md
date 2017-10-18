@@ -56,6 +56,20 @@ eval $(docker-machine env docker-machine-<alias>)
 
 Check docker is working: Click [here](https://docs.docker.com/docker-for-mac/) for Mac OSX. Click [here](https://docs.docker.com/docker-for-windows/) for Windows.
 
+### Create ACS Cluster
+
+This section will take us through the steps of creating a new Container Cluster with Kubernetes as the Orchestrator using Azure Container Service, also known as ACS.
+
+```bash
+# Create Resource Group
+az group create \
+    --name acs<alias>-rg
+    --location canadacentral
+
+# Create Cluster Command.
+az acs create --orchestrator-type kubernetes --resource-group acs<alias>-rg --name myK8sCluster-<alias> --generate-ssh-keys
+```
+
 ### Clone or download content of this GitHub repository (optional but recommended)
 
 The labs provided have a combination of text documentation and sample code. In order to have all documentation and all necessary sample files locally on your computer, we strongly recommend you to clone the repo.

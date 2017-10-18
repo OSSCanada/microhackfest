@@ -6,6 +6,8 @@ This lab shows how to create a Kubernetes (K8s) Cluster using ACS along with how
 
 1. Spin up a Container using ACI
     * Use the ``az container`` command
+    * Pick a Web Application Image and expose it via a Public IP
+    * Test Container via Public IP
 
 ## Create Customized ACS Cluster:
 
