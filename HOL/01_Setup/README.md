@@ -41,7 +41,7 @@ This remote Docker host will be used to pull and push container images to a regi
 az login
 
 az group create \
-    --name docker-build-<alias>-rg
+    --name docker-machine-<alias>-rg
     --location canadacentral
 
 az account list
