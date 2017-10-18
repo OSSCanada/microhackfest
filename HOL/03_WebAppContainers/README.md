@@ -5,11 +5,15 @@ In this lab you will be working with Web App for Containers which is one of the 
 ## Deployment Methods:
 
 ### 1. Deploy a Container via the Azure Portal
+![pull/tag/push](images/deploy_container_with_portal.png)
+
 This method allows you to visually configure your Azure App Service to pull in ```kevingbb/bobble``` from Docker Hub (public image)
 - In the Azure Portal, navigate to your Web App you can configure/link/point to ``kevingbb/bobble`` from Docker Hub (public image)
 - This method is good for a single manual deployment process
 
 ### 2. Deploy a Container via the Azure CLI and scripting
+![pull/tag/push](images/deploy_container_with_cli.png)
+
 This method allows you to script and configure your Web App to pull in ``kevingbb/bobble`` from Docker Hub (public image)
 - Using Azure-CLI, create a new app service plan ```az appservice plan``` ... **Note:** Don't forget ```--is-linux``` flag
 - Now create the app ```az webapp create``` ***Note:*** Don't forget to specify a container image source ```-i``` flag
