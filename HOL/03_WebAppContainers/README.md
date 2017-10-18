@@ -7,13 +7,18 @@ In this lab you will be working with Web App for Containers which is one of the 
 ### 1. Deploy a Container via the Azure Portal
 This method allows you to visually configure your Azure App Service to pull in ```kevingbb/bobble``` from Docker Hub (public image)
 - In the Azure Portal, navigate to your Web App you can configure/link/point to ``kevingbb/bobble`` from Docker Hub (public image)
+- This method is good for a single manual deployment process
 
-### 2. Deploy a Container via the Azure CLI
+### 2. Deploy a Container via the Azure CLI and scripting
 This method allows you to script and configure your Web App to pull in ``kevingbb/bobble`` from Docker Hub (public image)
 - Using Azure-CLI, create a new app service plan ```az appservice plan``` ... **Note:** Don't forget ```--is-linux``` flag
 - Now create the app ```az webapp create``` ***Note:*** Don't forget to specify a container image source ```-i``` flag
+- This method is best for an automated scripted process
 
-### 3. Deploy an App with Git
+### 3. Deploy an App with GitHub
+
+![pull/tag/push](images/deploy_app_with_github.png)
+
 This method is ___not___ a contianer exercise.  Rather this is a different deployment method.  This will not build/deploy an updated container, but rather will directly connect your Github repo to Azure App Services.  This is done through a webhook to Azure App Services, which will trigger Azure App Services to ```pull``` in the new code and reload your web app everytime you ```push``` new code to your repository, on a specified repo ```branch``` (usually ```master``` branch).
 
 - Create new Web App using same App Service Plan
@@ -29,11 +34,13 @@ This method is ___not___ a contianer exercise.  Rather this is a different deplo
     git remote add ...
     git push ...
 ```
+- This will cause App Service to pull in the new code (via a webhook) and mount it into a Run Time Environment (Pre-baked Container for your programming language)
+- This method is good for deploying application **code** directly to the App Service
 
 ### 4. Deploy a container via a Private Container Registry (Azure Container Registry - ACR)
 - Create an Azure Container Registry (ACR)
-- Pull in a public image from docker hub
-- Re-tag the public image and namespace it to your private registry (hint: ```<registry_name>.azurecr.io```)
+- Pull in a public image from docker hub (e.g. ```kevingbb/bobble```)
+- Re-tag the public image and namespace it to your private registry (hint: ```<registry_name>.azurecr.io/<image_name>```)
 - Link your new ACR to your Web App for Containers Service (WACS)
     - You can do this in the portal or CLI
     - You can also enable Continuous Deployment when the ACR image is updated (pushed to ACR)
