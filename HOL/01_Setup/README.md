@@ -87,4 +87,4 @@ The labs provided have a combination of text documentation and sample code. In o
 
 ## Summary
 
-You have the latest version of Azure CLI, Visual Studio Code and Git installed on your computer along with a Docker Build Machine in Azure.
+You have the latest version of Azure CLI, Visual Studio Code and Git installed on your computer along with a Docker Host Build Machine in Azure.
