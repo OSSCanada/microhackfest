@@ -34,18 +34,20 @@ Using **Azure Cloud Shell** in the browser, We will use the ```docker-machine```
 
 ![cloud shell](images/cloud_shell.png)
 
-This remote Docker host will be used to pull and push container images to a registry and build custom images from.  We do this by configuring our local Docker Environment variablesto "point to" the remote Docker host.  This will allow us to run Docker commands from our local terminal, but the commands will actually execute remotely on the Docker host.
+This remote Docker host VM will be used to pull and push container images to a registry and build custom images from.  We do this by configuring our local Docker Environment variables (using ```eval $(docker-machine ...)```) to "point to" the remote Docker host VM.  This will allow us to type Docker commands from our local terminal, however the commands are actually executed remotely on the Docker host VM we create.
 
 ```bash
 # Not needed for cloud shell - you're already logged in.
 az login
 
+# Create a new resource group to use (you could also reuse an existing group...just remember which one you use)
 az group create \
     --name docker-machine-<alias>-rg \
     --location canadacentral
 
 az account list
 
+# Create the remote Docker host VM
 docker-machine create \
     --driver azure \
     --azure-subscription-id <subscription_id> \
@@ -55,6 +57,9 @@ docker-machine create \
     --azure-location canadacentral \
     docker-machine-<alias>
 
+# This will execute the text that docker-machine env command generates
+# it is a one time variable setup - it will not persist between terminal sessions
+# you must run this command again the next time you login
 eval $(docker-machine env docker-machine-<alias> --shell bash)
 ```
 
