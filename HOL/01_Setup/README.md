@@ -30,7 +30,9 @@ git --version
 
 ### Create Docker Build Machine
 
-Using **Azure Cloud Shell** in the browser, We will use the ```docker-machine``` command to provision a VM to Azure and install the Docker engine on to it.  [**Note:** Azure Cloud Shell provisions a terminal session in Azure with many tools already installed including Azure-CLI, Docker, Docker-Machine and others.]  
+Using **Azure Cloud Shell** in the browser, we will use the ```docker-machine``` command to provision a VM to Azure and install the Docker engine on to it.
+
+**Note:** Azure Cloud Shell provisions a terminal session in Azure with many tools already installed including Azure-CLI, Docker, Docker-Machine and others. (more info about cloud shell [here](https://azure.microsoft.com/en-us/features/cloud-shell/))
 
 ![cloud shell](images/cloud_shell.png)
 

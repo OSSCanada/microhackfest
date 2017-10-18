@@ -18,4 +18,22 @@ docker login <your-registry-name>.azurecr.io
 # enter password: Password is found in Azure Dashboard for ACR
 # you can have 2 simultaneously under Access keys
 
-# create 
+# Your ~/.docker/config.json should contain something like this:
+#
+# {
+#    "auths": {
+#        "https://index.docker.io/v1/": {},
+#        "https://<registry_name>.azurecr.io": {}
+#    }
+# }
+#
+
+# re-tagging an image
+docker tag <registry_name>/<image_name> <new_registry_url>/<image_name>:<version>
+
+# push image to new registry
+docker push <new_registry_url>/<image_name>
+
+# Docker will match up your <new_registry_url> with wha is in your config.json file...
+# without a match it will try to push to docker hub
+# if the project does not exist/you do not have auth to push to a repo of that name, the push fails
