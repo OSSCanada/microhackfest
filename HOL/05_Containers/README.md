@@ -82,5 +82,8 @@ kubectl delete deploy azure-vote-front
 cd ~/.kube
 
 # copy the remote config file to your local ~/.kube folder
-scp -i /path/to/your/ssh/key <your_kube_user>@<kube_cluster_name>.<azure_location>.cloudapp.azure.com:~/.kube/config .
+scp -i /path/to/your/ssh/key <your_kube_user>@<kube_cluster_master_name>.<azure_location>.cloudapp.azure.com:~/.kube/config ~/.kube
+
+# example
+scp -i ~/.ssh/id_rsa azureuser@rkk8sclust-resourcegroup-uuid.canadacentral.cloudapp.azure.com.canadacentral.cloudapp.azure.com:~/.kube/config ~/.kube
 ```
