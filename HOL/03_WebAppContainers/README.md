@@ -25,7 +25,7 @@ This method allows you to script and configure your Web App to pull in ``kevingb
 - Now create the app ```az webapp create``` ***Note:*** Don't forget to specify a container image source ```-i``` flag
 - This method is best for an automated scripted process
 
-If you are stuck, check out the **commands.sh** file in this folder.
+If you are stuck, check out the [command_examples.sh](command_examples.sh) file in this folder.
 
 ### 3. Deploy an App with GitHub
 
