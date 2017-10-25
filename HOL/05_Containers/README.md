@@ -64,6 +64,8 @@ The purpose of this section is to help you understand a couple of the key buildi
     * **Hint:** You need to link the Service and Deployment together.
     * **Note:** Getting an external IP may take some time initially. use ``kubectl get service -w`` until an external IP is shown.
     * Test Container via Public IP
+- Combine the Deployment Manifest and the Service Manifest yaml files into a **single** Kubernetes Manifest yaml file ([example](kubernetes_manifest_example.yaml)]and deploy it into a new Namespace
+    - **Hint:** Take a look at the [azure-vote.yaml](azure-vote.yaml) file that was used to deploy the full application.
 
 ## Troubleshooting
 
@@ -84,9 +86,7 @@ scp -i ~/.ssh/id_rsa azureuser@rkk8sclust-resourcegroup-uuid.canadacentral.cloud
 
 ## Advanced:
 
-1. Combine the deployment Manifest and the Service Manifest into a single file and deploy to a new Namespace.
-    - **Hint:** Take a look at the [azure-vote.yaml](azure-vote.yaml) file that was used to deploy the full application.
-2. Add ACI Node to existing K8s Cluster and run a workload on it.
+1. Add ACI Node to existing K8s Cluster and run a workload on it.
     - **Hint:** Click [here](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-orchestrator-relationship#sample-implementation-azure-container-instances-connector-for-kubernetes) and go to **Sample Implementation** section at the bottom.
-3. Replace LoadBalancer setup in yaml file with Ingress Controller.
+2. Replace LoadBalancer setup in yaml file with Ingress Controller.
     - **Hint:** Click [here](https://docs.microsoft.com/en-us/azure/aks/kubernetes-helm) for a hint.

@@ -19,5 +19,5 @@ A Desktop/Laptop with the following installe:
 - A modern Web Browser (Edge, FireFox, Chrome, Safari)
 
 ## Contributors
-Kevin Harris - [@kevingbb](@kevingbb)
-Ray Kao - [@raykao](@raykao)
+- Kevin Harris - [@kevingbb](@kevingbb)
+- Ray Kao - [@raykao](@raykao)
