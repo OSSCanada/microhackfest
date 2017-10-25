@@ -45,7 +45,7 @@ The purpose of this section is to help you understand how you can leverage Funct
 ## Advanced
 
 1. Add Application Insights to your Function for increased visibility to what is happenning with your Function at runtime.
-	**Hint:** Click [here](https://blogs.msdn.microsoft.com/appserviceteam/2017/05/10/application-insights-integration-with-functions-now-in-preview/) for an example.
+	- **Hint:** Click [here](https://blogs.msdn.microsoft.com/appserviceteam/2017/05/10/application-insights-integration-with-functions-now-in-preview/) for an example.
 2. Add Cognitive Services - Sentiment Analysis to HTTP Function in step 1.
 
 	The purpose of this section is to help you understand how to add intelligence to your applications. In this case we are leveraging Cognitive Services - Sentiment Analysis, but this can just as easily be a custom Machine Learning algorithm.
