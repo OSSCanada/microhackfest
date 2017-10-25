@@ -64,16 +64,16 @@ The purpose of this section is to help you understand how to clone/copy images v
 
 #### Notes:
 
-1. By default the ```docker``` command knows to ```pull``` from docker hub registry
-2. In order to ```push``` to your registry you must be logged in by running ```docker login <your-private-repo-url>```
+- By default the ```docker``` command knows to ```pull``` from docker hub registry
+- In order to ```push``` to your registry you must be logged in by running ```docker login <your-private-repo-url>```
     - ```docker login``` by itself will log you in to docker hub
         - you must include a URL to authenticate against a privately hosted registry (like Azure Container Registry)
     - after logging into your registry, credentials are cached for future use
         - for Azure Container Registry your username is the same as ```<registry_name>```.azurecr.io
         - the password can be found in your Azure Container Registry Dashboard in the Azure Portal
-3. You can check your cached credentials in your ```.docker/config.json``` in your home folder
+- You can check your cached credentials in your ```.docker/config.json``` in your home folder
     - you will see the registries your're logged into and can ```push``` to
-4. By tagging images with ```<registry_name>/<image_name>``` docker will resolve this name to the proper ```<registry_name>``` to push/pull to
+- By tagging images with ```<registry_name>/<image_name>``` docker will resolve this name to the proper ```<registry_name>``` to push/pull to
     - simple names like ```kevingbb/<image_name>``` are likely docker hub registries
     - complex names like ```<registry_name>.azurecr.io/<image_name>``` are privately hosted registries (not docker hub)
     
