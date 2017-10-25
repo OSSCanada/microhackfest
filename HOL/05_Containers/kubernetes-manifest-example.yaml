@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: <your_namespace_goes_here>
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: kh-svc
+  namespace: <your_namespace_goes_here>
+spec:
+  selector:
+    app: <your_appname_goes_here>
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+  type: LoadBalancer
+---
+apiVersion: apps/v1beta1 # for versions before 1.6.0 use extensions/v1beta1
+kind: Deployment
+metadata:
+  name: kh-deploy
+  namespace: <your_namespace_goes_here>
+  labels:
+    zone: prod
+    version: v1
+spec:
+  replicas: 3
+  minReadySeconds: 15
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: <your_appname_goes_here>
+    spec:
+      containers:
+      - name: kh-ctr1
+        image: evillgenius/kuar:1
+        ports:
+        - containerPort: 8080
