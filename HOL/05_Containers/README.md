@@ -60,7 +60,7 @@ The purpose of this section is to help you understand a couple of the key buildi
     * Make 3 replicas of the app
     * Use a RollingUpdate strategy with no less than 1 pod avaialble and no more than 1 pod extra during updates
     * Verify deployment is operational by using ``kubectl port-forward`` command to forward port 8080 on your local host to port 8080 on any of the pods in the deployment and checking with you browser ``http://localhost:8080``
-- Create a Service manifest that exposes the Deployment above using a LoadBalancer ![service.yaml](service.yaml):
+- Create a Service manifest that exposes the Deployment above using a LoadBalancer [service.yaml](service.yaml):
     * **Hint:** You need to link the Service and Deployment together.
     * **Note:** Getting an external IP may take some time initially. use ``kubectl get service -w`` until an external IP is shown.
     * Test Container via Public IP
@@ -85,8 +85,8 @@ scp -i ~/.ssh/id_rsa azureuser@rkk8sclust-resourcegroup-uuid.canadacentral.cloud
 ## Advanced:
 
 1. Combine the deployment Manifest and the Service Manifest into a single file and deploy to a new Namespace.
-    **Hint:** Take a look at the **azure-vote.yaml** file that was used to deploy the full application.
+    - **Hint:** Take a look at the [azure-vote.yaml](azure-vote.yaml) file that was used to deploy the full application.
 2. Add ACI Node to existing K8s Cluster and run a workload on it.
-    **Hint:** Click [here](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-orchestrator-relationship#sample-implementation-azure-container-instances-connector-for-kubernetes) and go to **Sample Implementation** section at the bottom.
+    - **Hint:** Click [here](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-orchestrator-relationship#sample-implementation-azure-container-instances-connector-for-kubernetes) and go to **Sample Implementation** section at the bottom.
 3. Replace LoadBalancer setup in yaml file with Ingress Controller.
-    **Hint:** Click [here](https://docs.microsoft.com/en-us/azure/aks/kubernetes-helm) for a hint.
+    - **Hint:** Click [here](https://docs.microsoft.com/en-us/azure/aks/kubernetes-helm) for a hint.

@@ -27,7 +27,7 @@ The purpose of this section is to help you understand how easy it can be to inte
 
 ## 3. Create a File Moving Flow
 
-The purpose of this section is to help you understand how you can leverage Functions to move data around in Azure. We are going to take data that arrives in a Queue and put it into an Azure Storage Table. This an just as easily be a SQL or No SQL DB as well.
+The purpose of this section is to help you understand how you can leverage Functions to move data around in Azure. We are going to take data that arrives in a Queue and put it into an Azure Storage Table. This can just as easily be a SQL or No SQL DB as well.
 
 - Similar to step 1 above, leverage the same Function App, but this time create a **Timer Trigger** Function.
 	* Schedule the timer for every 20 seconds
@@ -53,6 +53,5 @@ The purpose of this section is to help you understand how you can leverage Funct
 	- Add Cognitive Servics Sentiment Analysis Response to HTTP Function. In order to do this you first need to add the Cognitive Services resource to your Resource Group. Click [here](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account) for details.
 	- The second step of this flow is to pass something in to the Function. Same as any other API, this can be done via **Pass Parameter via Query String** or **Pass Parameter via Post**. Click [here](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-serverless-api) for hints around how to do this.
 	- The last step is to add the Cognitive Services - Sentiment Analysis to the code.
-
-	**Hint:** Click [here](https://docs.microsoft.com/en-us/azure/azure-functions/functions-twitter-email) for a comprehensive example that includes Functions, Logic Apps, Twitter and Cognitive Services.
+	- **Hint:** Click [here](https://docs.microsoft.com/en-us/azure/azure-functions/functions-twitter-email) for a comprehensive example that includes Functions, Logic Apps, Twitter and Cognitive Services.
  
