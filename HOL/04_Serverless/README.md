@@ -4,29 +4,37 @@ This lab shows the different ways Functions can be executed.
 
 ## How To:
 
-1. Create a HTTP Function from the quickstart
+1. Create an HTTP Function from the quickstart
 	* Azure Portal
 	* Create HTTP Accessible Function
 	* Test Function via Portal
 	* Access Function Endpoint from Browser
+
 2. Verify Function Execution via Logs
+	- you will have access in your functions portal to logs, which are written to when your function is triggered
+
 3. Add Cognitive Servics Sentiment Analysis Response to HTTP Function
 	* Pass Parameter via Query String
 	* Pass Parameter via Post
 	* Setup Sentiment Analysis and get Key
 	* Retrieve Key from Application Settings
+
 4. Create a new GitHub Webhook Function
-	* Create GitHub Account if do not have one already
-	* Setup Issue Comment Webhook in GitHub
-		Pick Existing Repo or Create New One
-		Go to Settings
+	* Create GitHub Account if you do not have one already
+	* Setup Issue Comment Webhook in GitHub (find this under settings in your repo)
+		- Pick an existing Repo or Create New One
+		- Go to Settings
 	* Test Webhook by creating a Comment
+		- This will generate an event that will trigger the webhook to your function and pass on data about the event
+
 5. Create Timer Function
 	* Schedule the timer for every 20 seconds
 	* Have Function write to the Log
+
 6. Add Message Queue to Timer Function
 	* Add Queue as Output and call it myQueueItem
 	* Add Code to Function to write message to Queue
+
 7. Create Output Queue Trigger Function
 	* This Function will fire whenever a message is put into the Queue from above
 	* Have Function write Queue Message to Azure Table Storage using Bindings
