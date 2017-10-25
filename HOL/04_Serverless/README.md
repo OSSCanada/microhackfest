@@ -40,7 +40,7 @@ The purpose of this section is to help you understand how you can leverage Funct
 - Once the Queue Trigger Function is created, go to the Integrate feature in the menu on the left-hand side and create a new **Azure Storage Tables Output**.
 - Add logic to your Function that reads from the Queue and writes to the Table.
 
-**Hint:** If you are having difficulties, check-out the C# and NodeJS examples in this folder.
+**Hint:** If you are having difficulties, check-out the [C#](queue_function_example.csx) and [NodeJS](queue_function_example.csx) examples in this folder.
 
 ## Advanced
 
