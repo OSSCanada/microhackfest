@@ -8,7 +8,7 @@ The purpose of this section is similar to the Web App for Containers first chall
 
 - Spin up a Container using ACI via the az cli that is exposed via a Public IP. The az command you want to look at is **container**. A sample command should start with ``az container`` and then add the necessary parameters. One thing to keep in mind, pick a Web Application Image as we are gonig to expose it on a port so it needs to be HTTP accessible.
 
-**Hint:** Click ![here](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart) if you are having difficulties.
+**Hint:** Click [here](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart) if you are having difficulties.
 
 ## 2. Create Managed Kubernetes Cluster
 
@@ -16,7 +16,7 @@ The purpose of this section is to help you get familar with Kubernetes on Azure.
 
 - The first step is to create the Cluster.
 - The second step is to connect to the Cluster.
-- To make this easier, we are going to leverage the existing Tutorial in Azure Docs. Click ![here](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) to navigate to the Docs.
+- To make this easier, we are going to leverage the existing Tutorial in Azure Docs. Click [here](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) to navigate to the Docs.
 
 ## 3. Work with Already Created Cluster:
 
@@ -50,17 +50,17 @@ kubectl delete deploy azure-vote-front
 
 The purpose of this section is to help you understand a couple of the key building blocks when it comes to deploying Containers in Kubernetes. There are sample files in this directoy to help you out with the following challenges.
 
-- Create a Pod manifest file that has the following parameters ![pod.yaml](pod.yaml):
+- Create a Pod manifest file that has the following parameters [pod.yaml](pod.yaml):
     * Uses 2 Labels zone = prod and version = v1
     * Uses the evillgenius\kuar:1 image
     * Exposes port 8080
     * Verify Pod is operational by using ``kubectl port-forward`` command to forward port 8080 on your local host to port 8080 on the pod and checking with you browser ``http://localhost:8080``
-- Create a Deployment manifest using the same parameters as above but add ![deploy.yaml](deploy.yaml):
+- Create a Deployment manifest using the same parameters as above but add [deploy.yaml](deploy.yaml):
     * You will need to replace ``<APP_NAME_GOES_HERE>``
     * Make 3 replicas of the app
     * Use a RollingUpdate strategy with no less than 1 pod avaialble and no more than 1 pod extra during updates
     * Verify deployment is operational by using ``kubectl port-forward`` command to forward port 8080 on your local host to port 8080 on any of the pods in the deployment and checking with you browser ``http://localhost:8080``
-- Create a Service manifest that exposes the Deployment above using a LoadBalancer ![service.yaml](service.yaml):
+- Create a Service manifest that exposes the Deployment above using a LoadBalancer [service.yaml](service.yaml):
     * **Hint:** You need to link the Service and Deployment together.
     * **Note:** Getting an external IP may take some time initially. use ``kubectl get service -w`` until an external IP is shown.
     * Test Container via Public IP
@@ -85,8 +85,8 @@ scp -i ~/.ssh/id_rsa azureuser@rkk8sclust-resourcegroup-uuid.canadacentral.cloud
 ## Advanced:
 
 1. Combine the deployment Manifest and the Service Manifest into a single file and deploy to a new Namespace.
-    - **Hint:** Take a look at the ![azure-vote.yaml](azure-vote.yaml) file that was used to deploy the full application.
+    - **Hint:** Take a look at the [azure-vote.yaml](azure-vote.yaml) file that was used to deploy the full application.
 2. Add ACI Node to existing K8s Cluster and run a workload on it.
-    - **Hint:** Click ![here](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-orchestrator-relationship#sample-implementation-azure-container-instances-connector-for-kubernetes) and go to **Sample Implementation** section at the bottom.
+    - **Hint:** Click [here](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-orchestrator-relationship#sample-implementation-azure-container-instances-connector-for-kubernetes) and go to **Sample Implementation** section at the bottom.
 3. Replace LoadBalancer setup in yaml file with Ingress Controller.
-    - **Hint:** Click ![here](https://docs.microsoft.com/en-us/azure/aks/kubernetes-helm) for a hint.
+    - **Hint:** Click [here](https://docs.microsoft.com/en-us/azure/aks/kubernetes-helm) for a hint.
