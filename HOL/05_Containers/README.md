@@ -74,7 +74,7 @@ The purpose of this section is to help you understand a couple of the key buildi
     * **Hint:** You need to link the Service and Deployment together.
     * **Note:** Getting an external IP may take some time initially. use ``kubectl get service -w`` until an external IP is shown.
     * Test Container via Public IP
-- Combine the Deployment Manifest and the Service Manifest yaml files into a **single** Kubernetes Manifest yaml file ([example](kubernetes_manifest_example.yaml)]and deploy it into a new Namespace
+- Combine the Deployment Manifest and the Service Manifest yaml files into a **single** Kubernetes Manifest yaml file ([example](kubernetes-manifest-example.yaml)]and deploy it into a new Namespace
     - **Hint:** Take a look at the [azure-vote.yaml](azure-vote.yaml) file that was used to deploy the full application.
 
 ## 6. Build Custom Application
