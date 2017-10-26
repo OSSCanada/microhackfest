@@ -108,3 +108,11 @@ scp -i ~/.ssh/id_rsa azureuser@rkk8sclust-resourcegroup-uuid.canadacentral.cloud
     - **Hint:** Click [here](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-orchestrator-relationship#sample-implementation-azure-container-instances-connector-for-kubernetes) and go to **Sample Implementation** section at the bottom.
 2. Replace LoadBalancer setup in yaml file with Ingress Controller.
     - **Hint:** Click [here](https://docs.microsoft.com/en-us/azure/aks/kubernetes-helm) for a hint.
+3. Build a container image from scratch
+    - Pull in code from a git repository
+    - Add/Copy the code into your container via in a dockerfile
+    - Build a new image
+    - Push the new image to a Container Registry
+    - Deploy the new container via K8s
+
+![deploy a container image from scratch](images/git_pull_docker_build_push_k8s_workflow.png)
