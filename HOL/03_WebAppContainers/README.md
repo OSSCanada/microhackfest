@@ -52,6 +52,8 @@ This will not build/deploy an updated container, but rather will directly connec
 - This will cause App Service to pull in the new code (via a webhook) and mount it into a Run Time Environment (Pre-baked Container for your programming language)
 - This method is good for deploying application **code** directly to the App Service.
 
+**Hint:** Click [here](https://docs.microsoft.com/en-us/azure/app-service/app-service-deploy-local-git) if you are having difficulties.
+
 ### 4. Deploy a container via a Private Container Registry (Azure Container Registry - ACR)
 
 The purpose of this section is to help you understand how to clone/copy images via the PULL, TAG and PUSH flow.
@@ -85,8 +87,8 @@ Trouble shooting into the container is done through Kudu and the console Kudu pr
 ## Advanced:
 
 1. Deploy Custom Container from Private Registry.
-    **Hint:** Do the same as in step 1 except use the image you pushed to ACR in step 4.
+    - **Hint:** Do the same as in step 1 except use the image you pushed to ACR in step 4.
 2. Add SSH access to custom Container via Kudu
-    **Hint:** Need to install SSH via Dockerfile and setup with a specific user, click [here](https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-ssh-support) for details.
+    - **Hint:** Need to install SSH via Dockerfile and setup with a specific user, click [here](https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-ssh-support) for details.
 3. Implement Continuous Integration
-    **Hint:** Enable Continuous Deployment feature, click [here](https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-ci-cd) for details.
+    - **Hint:** Enable Continuous Deployment feature, click [here](https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-ci-cd) for details.
