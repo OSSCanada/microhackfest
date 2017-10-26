@@ -18,6 +18,9 @@ A Desktop/Laptop with the following installe:
     - Download for macOS
 - A modern Web Browser (Edge, FireFox, Chrome, Safari)
 
+## Important links
+- [Azure Container Engine](https://github.com/Azure/acs-engine)
+
 ## Contributors
 - Kevin Harris - [@kevingbb](@kevingbb)
 - Ray Kao - [@raykao](@raykao)
