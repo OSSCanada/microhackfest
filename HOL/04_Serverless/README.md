@@ -20,7 +20,7 @@ The purpose of this section is to help you understand how easy it can be to inte
 
 - Go to http://github.com and create a GitHub Account if you do not have one already.
 - Pick an existing GitHub Repository (ie. Repo) or create a new one, then setup a **Comment** webhook under **Settings**.
-- Similar to step 1 above, leverage teh same Function App, but this time create a **Webhhok Trigger** Function.
+- Similar to step 1 above, leverage the same Function App, but this time create a **Webhhok Trigger** Function.
 - Write code inside of the Function that writes the **GitHub Comment** to the Function Log.
 
 **Hint:** Click [here](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-github-webhook-triggered-function) if you are having difficulties.
@@ -33,7 +33,7 @@ The purpose of this section is to help you understand how you can leverage Funct
 	* Schedule the timer for every 20 seconds
 	* Have Function write to the Log
 - Validate that the Function is working as expected.
-- Next, change the Function to add a message to a Queue. In the portal, go to the Integrate feature and add an **Azure Storage Queue** as an **Output**. Name the Output Queue variable **myQueueItem**.
+- Next, change the Function to add a message to a Queue. In the portal, go to the Integrate feature and add an **Azure Storage Queue** as an **Output**. Name the ``Message parameter name`` variable **myQueueItem**.
 - Add code to the Function that writes a message to the Queue when the Timer fires (ie. every 20 seconds).
 - We are now going to create the Function that reads from the Queue and adds the message to the Azure Table.
 - Similar to step 1 above, leverage the same Function App, but this time you are going to create a **Queue Trigger** that points to the Queue that was written to by the Timer Function.

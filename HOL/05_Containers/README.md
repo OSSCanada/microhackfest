@@ -1,16 +1,8 @@
 # Working with Azure Container Services Kubernetes
 
-This lab shows how to create a Kubernetes (K8s) Cluster using ACS along with how to deploy different types of workloads.
+This lab provides an introduction to Docker along with Kubernetes. It also shows how to create a Kubernetes (K8s) Cluster using ACS along with how to deploy different types of workloads.
 
-## 1. Create Container with Azure Container Instance (ACI)
-
-The purpose of this section is similar to the Web App for Containers first challenge, show how easy it is to get started with Containers in Azure. The difference is that this is ACI which feels more like Serverless, and bills like Serverless, versus Web App for Containers which is PaaS.
-
-- Spin up a Container using ACI via the az cli that is exposed via a Public IP. The az command you want to look at is **container**. A sample command should start with ``az container`` and then add the necessary parameters. One thing to keep in mind, pick a Web Application Image as we are gonig to expose it on a port so it needs to be HTTP accessible.
-
-**Hint:** Click [here](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart) if you are having difficulties.
-
-## 2. Create Managed Kubernetes Cluster
+## 00 Pre-work
 
 The purpose of this section is to help you get familar with Kubernetes on Azure. There are a couple of options, Azure Container Service (ACS) which allows for complete control of the environment, and our new Managed Kubernetes Service (AKS) which is in **PREVIEW**. We are going to focus on AKS as that is the future and allows us to focus on deploying ``Applications`` versus managing ``Infrastructure``.
 
@@ -18,7 +10,25 @@ The purpose of this section is to help you get familar with Kubernetes on Azure.
 - The second step is to connect to the Cluster.
 - To make this easier, we are going to leverage the existing Tutorial in Azure Docs. Click [here](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) to navigate to the Docs.
 
-## 3. Work with Already Created Cluster:
+## 1. Introduction to Docker
+
+- Click [here](https://katacoda.com/courses/docker) and do the following exercises:
+    - ``Deploying Your First Docker Container``
+    - ``Building Container Images``
+
+## 2. Introduction to Kubernetes
+- Click [here](https://katacoda.com/courses/kubernetes) and do the following exercises:
+    - ``Deploy Containers Using Kubectl``
+
+## 3. Create Container with Azure Container Instance (ACI)
+
+The purpose of this section is similar to the Web App for Containers first challenge, show how easy it is to get started with Containers in Azure. The difference is that this is ACI which feels more like Serverless, and bills like Serverless, versus Web App for Containers which is PaaS.
+
+- Spin up a Container using ACI via the az cli that is exposed via a Public IP. The az command you want to look at is **container**. A sample command should start with ``az container`` and then add the necessary parameters. One thing to keep in mind, pick a Web Application Image as we are gonig to expose it on a port so it needs to be HTTP accessible.
+
+**Hint:** Click [here](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart) if you are having difficulties.
+
+## 4. Work with Already Created Cluster:
 
 The purpose of this section is to help you understand how to deploy Containers to Managed Kubernetes Services (AKS), which you will realize is exactly the same as Azure Container Service (ACS) Kubernetes.
 
@@ -46,7 +56,7 @@ kubectl delete svc azure-vote-back
 kubectl delete deploy azure-vote-front
 ```
 
-## 4. Take a Step Back and Understand Pods, Services & Deployments in Kubernetes
+## 5. Take a Step Back and Understand Pods, Services & Deployments in Kubernetes
 
 The purpose of this section is to help you understand a couple of the key building blocks when it comes to deploying Containers in Kubernetes. There are sample files in this directoy to help you out with the following challenges.
 
@@ -66,6 +76,14 @@ The purpose of this section is to help you understand a couple of the key buildi
     * Test Container via Public IP
 - Combine the Deployment Manifest and the Service Manifest yaml files into a **single** Kubernetes Manifest yaml file ([example](kubernetes_manifest_example.yaml)]and deploy it into a new Namespace
     - **Hint:** Take a look at the [azure-vote.yaml](azure-vote.yaml) file that was used to deploy the full application.
+
+## 6. Build Custom Application
+
+The purpose of this section is to understand how to build a Container Image from a GitHub Repository. After you have built your custom image you will then push it to your own Private ACR.
+
+- Step 1 is to build the Container Image. To make this easier, we are going to leverage the existing Tutorial in Azure Docs. Click [here](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app) to navigate to the Docs.
+- Step 2 is to push your Custom Container Image to ACR. To make this easier, we are going to leverage the existing Tutorial in Azure Docs. Click [here](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-acr) to navigate to the Docs.
+- Step 3 is to run the Container Application. To make this easier, we are going to leverage the existing Tutorial in Azure Docs. Click [here](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-application) to navigate to the Docs.
 
 ## Troubleshooting
 
