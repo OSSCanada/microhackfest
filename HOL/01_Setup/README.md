@@ -2,6 +2,16 @@
 
 In this lab you will find the prerequisites and steps to help you set up your computer. After completing the lab you will have a working environment, ready for the other labs.
 
+## 00 Requirements
+
+A Desktop/Laptop with the following installed:
+- Win10, macOS, Linux Desktop
+- Azure-CLI v2 (Python based CLI)
+- Docker Community Edition "CE"
+    - Download for Windows
+    - Download for macOS
+- A modern Web Browser (Edge, FireFox, Chrome, Safari)
+
 ## 1. Configure your computer
 
 ### Install Azure Command Line Interface (CLI)

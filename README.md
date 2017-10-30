@@ -8,18 +8,19 @@ This repositor contains the presentation and hands-on labs (HOLs) for Microservi
 
 ## [Hands On Labs](HOL)
 
-## Requirements
+## Important Microservices Links
+- [Design Patterns for Microservices](https://azure.microsoft.com/en-us/blog/design-patterns-for-microservices/)
+- [Microservices Example - eShop on Containers](https://github.com/dotnet-architecture/eShopOnContainers)
+- [Azure Application Architecture Guide](https://docs.microsoft.com/en-us/azure/architecture/guide/)
+- [Microservices Approach to Building Applications in Azure](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview-microservices)
 
-A Desktop/Laptop with the following installe:
-- Win7 and above, macOS, Linux Desktop
-- Azure-CLI v2 (Python based CLI)
-- Docker Community Edition "CE"
-    - Download for Windows
-    - Download for macOS
-- A modern Web Browser (Edge, FireFox, Chrome, Safari)
-
-## Important links
-- [Azure Container Engine](https://github.com/Azure/acs-engine)
+## Important Container Links
+- [Containerized Docker Application Lifecycle with Microsoft Platform and Tools](https://aka.ms/dockerlifecycleebook)
+- [AKS Git Repo](https://github.com/Azure/AKS)
+- [ACS Git Repo](https://github.com/Azure/ACS)
+- [ACR Git Repo](https://github.com/Azure/acr)
+- [Azure Container Engine Git Repo](https://github.com/Azure/acs-engine)
+- [ACI Connector K8s](https://github.com/Azure/aci-connector-k8s)
 
 ## Contributors
 - Kevin Harris - [@kevingbb](@kevingbb)
