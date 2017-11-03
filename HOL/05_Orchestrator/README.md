@@ -112,6 +112,12 @@ Once the config file is in your ```~/.kube``` directory you will be able to run 
 
 ***Note:*** The ```.kube/config``` file defines the cluster host information including the SSH keys to use to connect to the remote cluster/master.
 
+### Proxying to the K8s Dashboard from Windows with Putty
+
+```
+putty.exe -ssh -i <path to private key file> -L 80:localhost:80 <User name>@<Public DNS name of your master node>
+```
+
 ## Advanced:
 
 1. Add ACI Node to existing K8s Cluster and run a workload on it.
