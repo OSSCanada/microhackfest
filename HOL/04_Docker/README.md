@@ -4,17 +4,17 @@
     - ``Deploying Your First Docker Container``
     - ``Building Container Images``
 
-## 5. Build Custom Application
+## 2. Build Custom Application
 
-The purpose of this section is to understand how to build a Container Image from a GitHub Repository. After you have built your custom image you will then push it to your own Private ACR.
+The purpose of this section is to understand how to build a Container Image from a GitHub Repository (Application Code) and script a container image build. After you have built your custom image you will then push it to your own Private Container Registry (i.e. Azure Container Registry - ACR).
 
 - Step 1 is to build the Container Image. To make this easier, we are going to leverage the existing Tutorial in Azure Docs. Click [here](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app) to navigate to the Docs.
 - Step 2 is to push your Custom Container Image to ACR. To make this easier, we are going to leverage the existing Tutorial in Azure Docs. Click [here](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-acr) to navigate to the Docs.
 - Step 3 is to run the Container Application. To make this easier, we are going to leverage the existing Tutorial in Azure Docs. Click [here](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-application) to navigate to the Docs.
 
-### 4. Deploy a container via a Private Container Registry (Azure Container Registry - ACR)
+### 3. Deploy a container via a Private Container Registry (Azure Container Registry - ACR)
 
-The purpose of this section is to help you understand how to clone/copy images via the PULL, TAG and PUSH flow.
+The purpose of this section is to help you understand how to clone/copy images via the PULL, TAG and PUSH flow with the docker command line tool (aka docker client).
 
 - Create an Azure Container Registry (ACR)
 - Pull in a public image from docker hub (e.g. ```kevingbb/bobble```)
