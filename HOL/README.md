@@ -15,10 +15,14 @@ In this lab you will create a free Microsoft Azure trial account and activate th
 
 In this lab you will learn about Azure Web App for Containers which is almost the easiest way to get started with Containers in Azure.
 
-#### [Lab 4 - Serverless with Cognitive Services](04_Serverless)
+#### [Lab 4 - Containerization ("Dockerize an App")](04_Docker)
+
+In this lab you will learn the basics of Docker and how to take an existing application and ``Dockerize`` it. This is the basic building block of using Containerization to build New Applications or Lift & Shift existing applications.
+
+#### [Lab 5 - Orchestration in Azure with Kubernetes](05_Orchestrator)
+
+In this lab you will learn the basics of Container Orchestrators with a deeper dieve on the basics of Kubernetes (K8s). You will create a Kubernetes Cluster using Azure Container Service (ACS) or ACS Managed Kubernetes (AKS) and learn how to deploy services via a K8s Manifest File.
+
+#### [Lab 6 - Serverless with Cognitive Services](06_Serverless)
 
 In this lab you will learn why Serverless is all the rage when it comes to Application Innovation and why integrating it with Artificial Intelligence (AI) is the key to building Intelligent Applications.
-
-#### [Lab 5 - Azure Container Service with Kubernetes](05_Containers)
-
-In this lab you will create a Kubernetes Cluster using Azure Container Service (ACS) and learn how to persist workloads such as SQL Server in addition to adding an unlimited node capacity in the form of Azure Container Instance (ACI).

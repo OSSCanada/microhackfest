@@ -60,9 +60,8 @@ Trouble shooting into the container is done through Kudu and the console Kudu pr
 
 ## Advanced:
 
-1. Deploy Custom Container from Private Registry.
-    - **Hint:** Do the same as in step 1 except use the image you pushed to ACR in step 4.
-2. Add SSH access to custom Container via Kudu
+1. Add SSH access to custom Container via Kudu
     - **Hint:** Need to install SSH via Dockerfile and setup with a specific user, click [here](https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-ssh-support) for details.
-3. Implement Continuous Integration
-    - **Hint:** Enable Continuous Deployment feature, click [here](https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-ci-cd) for details.
+2. Implement Continuous Integration & Continuous Deployment (CI/CD)
+    - **Hint #1:** Enable Continuous Deployment feature and leverage ``webhook``, click [here](https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-ci-cd) for details.
+    - **Hint #2:** Enabled CI/CD with VSTS, click [here](https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/deploy-docker-webapp)
