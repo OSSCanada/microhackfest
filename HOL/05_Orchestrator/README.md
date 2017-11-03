@@ -74,8 +74,9 @@ The purpose of this section is to help you understand a couple of the key buildi
 ## Troubleshooting
 
 ### Unable to connect to your cluster:
-- Some versions of Azure-CLI will not pull down your kube config file properly
-- you must pull it down manually:
+- Some versions of Azure-CLI will not pull down/copy your ```./kube/config``` file properly to your local machine
+    -  This is a known bug and has a fix already, but may not be available yet depeding on your OS's system packge for Azure-CLI or your installation method for Azure-CLI
+- Solution: you must pull the ```.kube/config``` file down manually
 
 ```:bash
 # go to your ~/.kube folder
@@ -87,6 +88,10 @@ scp -i /path/to/your/ssh/key <your_kube_user>@<kube_cluster_master_name>.<azure_
 # example
 scp -i ~/.ssh/id_rsa azureuser@rkk8sclust-resourcegroup-uuid.canadacentral.cloudapp.azure.com.canadacentral.cloudapp.azure.com:~/.kube/config ~/.kube
 ```
+
+Once the config file is in your ```~/.kube``` directory you will be able to run the ```kubectl``` command against your remote cluster.
+
+***Note:*** The ```.kube/config``` file defines the cluster host information including the SSH keys to use to connect to the remote cluster/master.
 
 ## Advanced:
 
