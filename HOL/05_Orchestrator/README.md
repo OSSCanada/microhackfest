@@ -76,20 +76,19 @@ The purpose of this section is to help you understand a couple of the key buildi
 
 The purpose of this section is to help you combine all of the concepts we have covered throughout the day by deploying your application from your own Private Regsitry, in this case ACR.
 
-    - Summary Steps Througout the Day:
-        - Pull in code from a git repository
-        - Add/Copy the code into your container via **dockerfile**
-        - Build a new Container Image
-        - Push the new image to a Private Container Registry (ACR)
-        - Deploy the new container via K8s
+- Summary Steps Througout the Day:
+    * Pull in code from a git repository
+    * Add/Copy the code into your container via **dockerfile**
+    * Build a new Container Image
+    * Push the new image to a Private Container Registry (ACR)
+    * Deploy the new container via K8s
 
 ![deploy a container image from scratch](images/git_pull_docker_build_push_k8s_workflow.png)
 
-    - Combine the Deployment Manifest and the Service Manifest yaml files from previous step into a **single** Kubernetes Manifest yaml file ([example](kubernetes-manifest-example.yaml)]and deploy it into a new Namespace using Container Images from your Private Registry.
-    - **Hint:** Take a look at the [azure-vote.yaml](azure-vote.yaml) file that was used to deploy the full application as an example of how to combine the different K8s building blocks together and pull from ACR.
+- Combine the Deployment Manifest and the Service Manifest yaml files from previous step into a **single** Kubernetes Manifest yaml file ([example](kubernetes-manifest-example.yaml)]and deploy it into a new Namespace using Container Images from your Private Registry.
+    * **Hint:** Take a look at the [azure-vote.yaml](azure-vote.yaml) file that was used to deploy the full application as an example of how to combine the different K8s building blocks together and pull from ACR.
 
-
-    - **Hint:** If you are struggling, you can leverage the existing Tutorial in Azure Docs. Click [here](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-application) to navigate to the Docs.
+**Hint:** If you are struggling, you can leverage the existing Tutorial in Azure Docs. Click [here](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-application) to navigate to the Docs.
 
 ## Troubleshooting
 
