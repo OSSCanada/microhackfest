@@ -10,17 +10,11 @@ The purpose of this section is to help you get familar with Kubernetes on Azure.
 - The second step is to connect to the Cluster.
 - To make this easier, we are going to leverage the existing Tutorial in Azure Docs. Click [here](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) to navigate to the Docs.
 
-## 1. Introduction to Docker
-
-- Click [here](https://katacoda.com/courses/docker) and do the following exercises:
-    - ``Deploying Your First Docker Container``
-    - ``Building Container Images``
-
-## 2. Introduction to Kubernetes
+## 1. Introduction to Kubernetes
 - Click [here](https://katacoda.com/courses/kubernetes) and do the following exercises:
     - ``Deploy Containers Using Kubectl``
 
-## 3. Create Container with Azure Container Instance (ACI)
+## 2. Create Container with Azure Container Instance (ACI)
 
 The purpose of this section is similar to the Web App for Containers first challenge, show how easy it is to get started with Containers in Azure. The difference is that this is ACI which feels more like Serverless, and bills like Serverless, versus Web App for Containers which is PaaS.
 
@@ -28,7 +22,7 @@ The purpose of this section is similar to the Web App for Containers first chall
 
 **Hint:** Click [here](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart) if you are having difficulties.
 
-## 4. Work with Already Created Cluster:
+## 3. Work with Already Created Cluster:
 
 The purpose of this section is to help you understand how to deploy Containers to Managed Kubernetes Services (AKS), which you will realize is exactly the same as Azure Container Service (ACS) Kubernetes.
 
@@ -56,7 +50,7 @@ kubectl delete svc azure-vote-back
 kubectl delete deploy azure-vote-front
 ```
 
-## 5. Take a Step Back and Understand Pods, Services & Deployments in Kubernetes
+## 4. Take a Step Back and Understand Pods, Services & Deployments in Kubernetes
 
 The purpose of this section is to help you understand a couple of the key building blocks when it comes to deploying Containers in Kubernetes. There are sample files in this directoy to help you out with the following challenges.
 
@@ -77,7 +71,7 @@ The purpose of this section is to help you understand a couple of the key buildi
 - Combine the Deployment Manifest and the Service Manifest yaml files into a **single** Kubernetes Manifest yaml file ([example](kubernetes-manifest-example.yaml)]and deploy it into a new Namespace
     - **Hint:** Take a look at the [azure-vote.yaml](azure-vote.yaml) file that was used to deploy the full application.
 
-## 6. Build Custom Application
+## 5. Build Custom Application
 
 The purpose of this section is to understand how to build a Container Image from a GitHub Repository. After you have built your custom image you will then push it to your own Private ACR.
 
