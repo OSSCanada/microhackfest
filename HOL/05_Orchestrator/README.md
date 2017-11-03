@@ -71,14 +71,6 @@ The purpose of this section is to help you understand a couple of the key buildi
 - Combine the Deployment Manifest and the Service Manifest yaml files into a **single** Kubernetes Manifest yaml file ([example](kubernetes-manifest-example.yaml)]and deploy it into a new Namespace
     - **Hint:** Take a look at the [azure-vote.yaml](azure-vote.yaml) file that was used to deploy the full application.
 
-## 5. Build Custom Application
-
-The purpose of this section is to understand how to build a Container Image from a GitHub Repository. After you have built your custom image you will then push it to your own Private ACR.
-
-- Step 1 is to build the Container Image. To make this easier, we are going to leverage the existing Tutorial in Azure Docs. Click [here](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app) to navigate to the Docs.
-- Step 2 is to push your Custom Container Image to ACR. To make this easier, we are going to leverage the existing Tutorial in Azure Docs. Click [here](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-acr) to navigate to the Docs.
-- Step 3 is to run the Container Application. To make this easier, we are going to leverage the existing Tutorial in Azure Docs. Click [here](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-application) to navigate to the Docs.
-
 ## Troubleshooting
 
 ### Unable to connect to your cluster:
