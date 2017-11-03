@@ -9,7 +9,7 @@ This lab provides an introduction to Docker command line tools and the workflow 
     - ``Deploying Your First Docker Container``
     - ``Building Container Images``
 
-### 3. Deploy a container via a Private Container Registry (Azure Container Registry - ACR)
+## 2. Deploy a container via a Private Container Registry (Azure Container Registry - ACR)
 
 The purpose of this section is to help you understand how to clone/copy images via the PULL, TAG and PUSH flow with the docker command line tool (aka docker client).
 
@@ -19,7 +19,7 @@ The purpose of this section is to help you understand how to clone/copy images v
 
 ![pull/tag/push](images/docker_push_to_registry.png)
 
-#### Notes:
+### Notes:
 
 - By default the ```docker``` command knows to ```pull``` from docker hub registry
 - In order to ```push``` to your registry you must be logged in by running ```docker login <your-private-repo-url>```
