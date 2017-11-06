@@ -7,6 +7,7 @@
 az group create --name <resource-group-name> --location <azure-datacentre-loc>
 az appservice plan create -g <resource-group-name> --name <appservice-plan-name> --is-linux
 az webapp create -n <web-app-name> -g <resource-group-name> --plan <appservice-plan-name> -i <docker-image-name>
+az webapp create -n <web-app-name> -g <resource-group-name> --plan <appservice-plan-name> --runtime "node|6.2" --deployment-local-git
 
 # Reconfigure your exisiting Web App for Container service
 az webapp config container set -n <web-app-name> -g <resource-group-name> -c <new-docker-image-name>
