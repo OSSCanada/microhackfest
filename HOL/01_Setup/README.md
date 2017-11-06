@@ -43,6 +43,7 @@ Expected output: **git version 2.14.1**
 
 Install Docker tools locally: 
 - Docker for [Mac](https://docs.docker.com/docker-for-mac/)
+- Docker for [Linux](https://docs.docker.com/engine/installation/#server)
 - Docker for [Windows](https://docs.docker.com/docker-for-windows/)
 
 **Only proceed with the following steps if you cannot install the Docker tools above. If you installed the tools skip to next section.**
