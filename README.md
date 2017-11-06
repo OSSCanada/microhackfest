@@ -21,6 +21,7 @@ This repositor contains the presentation and hands-on labs (HOLs) for Microservi
 - [ACR Git Repo](https://github.com/Azure/acr)
 - [Azure Container Engine Git Repo](https://github.com/Azure/acs-engine)
 - [ACI Connector K8s](https://github.com/Azure/aci-connector-k8s)
+- [Orchestrators are a Commodity by Brendan Burns](https://thenewstack.io/kubernetes-co-founder-brendan-burns-orchestration/)
 
 ## Contributors
 - Kevin Harris - [@kevingbb](@kevingbb)

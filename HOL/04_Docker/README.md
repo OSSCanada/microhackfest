@@ -13,7 +13,7 @@ In this section we will leverage https://KataCoda.com and use their interactive 
 
 ## 2. Build Custom Container Image
 
-The purpose of this section is to understand how to build a Container Image from a GitHub Repository (i.e. Application Code) and script a container image build with a ```Dockerfile```. After your custom image is built you will then push it to your own Private Container Registry (i.e. Azure Container Registry - ACR).
+The purpose of this section is to understand how to build a Container Image from a GitHub Repository (i.e. Application Code) and script a container image build with a ```Dockerfile```. After your custom image is built you will then push it to your own Private Container Registry (i.e. Azure Container Registry (ACR)).
 
 ![Docker file diagram](images/docker_file_layers.png)
 
@@ -57,3 +57,12 @@ The purpose of this section is to help you understand how to clone/copy images v
 - By tagging images with ```<registry_name>/<image_name>``` docker will resolve this name to the proper ```<registry_name>``` to push/pull to
     - simple names like ```kevingbb/<image_name>``` are likely docker hub registries
     - complex names like ```<registry_name>.azurecr.io/<image_name>``` are privately hosted registries (not docker hub)
+
+## Advanced:
+
+1. Stop and Start an existing Container.
+    - **Hint:** You will need to use the docker cli along with the stop and start commands.
+2. Create a file inside of an existing running Container.
+    - **Hint:** You will need to use the docker cli along with the exec command.
+3. Create a new Container based on the Container you added the file too.
+    - **Hint:** You will need to use the docker cli along with the commit command.
