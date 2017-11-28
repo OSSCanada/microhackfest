@@ -30,7 +30,7 @@ If you are stuck, check out the [command_examples.sh](command_examples.sh) file 
 ### 3. Deploy an App with GitHub
 
 **This method is ___not___ a container exercise.**
-The purpose of this seciton is to help you understand that there is more than one type of deployment option.
+The purpose of this section is to help you understand that there is more than one type of deployment option.
 
 ![pull/tag/push](images/deploy_app_with_github.png)
 
