@@ -19,17 +19,28 @@ A Desktop/Laptop with the following installed:
 
 To run these labs, **Azure CLI 2.0** is required. It can be downloaded and installed from [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
 
-Check Azure CLI is working and is 2.0.20:
+Check Azure CLI is working and is 2.0.20 or above:
 ```bash
 az --version
 ```
 Expected output: **azure-cli (2.0.20)**
 
-### 2. Install Visual Studio Code
+Check you can login to Azure and have access to an Azure Subscription:
+```bash
+az login
+```
+Expected output: Successful login.
+
+Check access to Azure Subscription:
+1. Login to Azure Portal: http://portal.azure.com
+2. Go to **More Services** at the bottom and then select **Subscriptions**
+Expected output: At least one **Active** Subscription. If there is nothing in the list you do not have access to an Azure Subscription, please let us know.
+
+## 2. Install Visual Studio Code
 
 To run these labs, **Visual Studio Code** is required. It can be downloaded and installed from [here](https://code.visualstudio.com).
 
-### 3. Install Git
+## 3. Install Git
 
 It should install as part of VS Code, but in case not install it from [here](https://git-scm.com).
 
@@ -39,12 +50,37 @@ git --version
 ```
 Expected output: **git version 2.14.1**
 
-### 4. Create Docker Build Machine
+## 4. Create Docker Build Machine
 
 Install Docker tools locally: 
 - Docker for [Mac](https://docs.docker.com/docker-for-mac/)
 - Docker for [Linux](https://docs.docker.com/engine/installation/#server)
 - Docker for [Windows](https://docs.docker.com/docker-for-windows/)
+
+Check to make sure docker is working correctly:
+```bash
+docker version
+```
+
+Expected output:
+
+    Client:
+    Version:      17.10.0-ce
+    API version:  1.32 (downgraded from 1.33)
+    Go version:   go1.9.1
+    Git commit:   f4ffd25
+    Built:        unknown-buildtime
+    OS/Arch:      darwin/amd64
+
+    Server:
+    Version:      17.09.0-ce
+    API version:  1.32 (minimum version 1.12)
+    Go version:   go1.8.3
+    Git commit:   afdb6d4
+    Built:        Tue Sep 26 22:40:56 2017
+    OS/Arch:      linux/amd64
+    Experimental: false
+
 
 **Only proceed with the following steps if you cannot install the Docker tools above. If you installed the tools skip to next section.**
 Using **Azure Cloud Shell** in the browser, we will use the ```docker-machine``` command to provision a VM to Azure and install the Docker engine on to it.
@@ -82,7 +118,7 @@ docker-machine create \
 eval $(docker-machine env docker-machine-<alias> --shell bash)
 ```
 
-### 5. Create ACS Cluster
+## 5. Create ACS Cluster (optional, will be doing as pat of Challenge #3)
 
 **Only proceed with the following steps if you want to provision a full ACS Kubernetes cluster versus using the new Managed Kubernetes Service called AKS.**
 This section will take us through the steps of creating a new Container Cluster with Kubernetes as the Orchestrator using Azure Container Service, also known as ACS.
@@ -97,7 +133,7 @@ az group create \
 az acs create --orchestrator-type kubernetes --resource-group acs<alias>-rg --name myK8sCluster-<alias> --generate-ssh-keys
 ```
 
-### 6. Clone or download content of this GitHub repository (optional but recommended)
+## 6. Clone or download content of this GitHub repository (optional but recommended)
 
 The labs provided have a combination of text documentation and sample code. In order to have all documentation and all necessary sample files locally on your computer, we strongly recommend you to clone the repo.
 
