@@ -81,8 +81,10 @@ Expected output:
     OS/Arch:      linux/amd64
     Experimental: false
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+## Only proceed with the following steps if you cannot install the Docker tools via the steps above. If you installed the tools skip to the next section (number 5). ##
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-**Only proceed with the following steps if you cannot install the Docker tools above. If you installed the tools skip to next section.**
 Using **Azure Cloud Shell** in the browser, we will use the ```docker-machine``` command to provision a VM to Azure and install the Docker engine on to it.
 
 **Note:** Azure Cloud Shell provisions a terminal session in Azure with many tools already installed including Azure-CLI, Docker, Docker-Machine and others. (more info about cloud shell [here](https://azure.microsoft.com/en-us/features/cloud-shell/))

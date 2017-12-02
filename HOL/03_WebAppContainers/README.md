@@ -6,17 +6,17 @@ In this lab you will be working with Web App for Containers which is one of the 
 
 ### 1. Deploy a Container via the Azure Portal
 
-The purpose of this section is to help you understand how easy it is to get started with Containers using the Azure Portal.
+The purpose of this section is to help you understand how easy it is to get started with **Web App for Containers** using the Azure Portal.
 
 ![pull/tag/push](images/deploy_container_with_portal.png)
 
 This method allows you to visually configure your Azure App Service to pull in ```kevingbb/bobble``` from Docker Hub (public image)
-- In the Azure Portal, navigate to your Web App you can configure/link/point to ``kevingbb/bobble`` from Docker Hub (public image)
-- This method is good for a single manual deployment process
+- In the Azure Portal, create a **Web App for Containers** app and configure ``kevingbb/bobble`` as the image to pull from Docker Hub (public image)
+- This method is good for running a single container.
 
 ### 2. Deploy a Container via the Azure CLI and scripting
 
-The purpose of this section is to help you understand how you can script the createion of Web for Containers for DevOps purposes or if you are the type of person that does not like to use GUI Tool.
+The purpose of this section is to help you understand how you can script the createion of **Web for Containers** for DevOps purposes or if you are the type of person that does not like to use GUI Tool.
 
 ![pull/tag/push](images/deploy_container_with_cli.png)
 
@@ -30,15 +30,15 @@ If you are stuck, check out the [command_examples.sh](command_examples.sh) file 
 ### 3. Deploy an App with GitHub
 
 **This method is ___not___ a container exercise.**
-The purpose of this seciton is to help you understand that there is more than one type of deployment option.
+The purpose of this section is to help you understand that there is more than one type of deployment option when it comes to App Service and Linux.
 
 ![pull/tag/push](images/deploy_app_with_github.png)
 
-This will not build/deploy an updated container, but rather will directly connect your Github repo to Azure App Services.  This is done through a webhook to Azure App Services, which will trigger Azure App Services to ```pull``` in the new code and reload your web app everytime you ```push``` new code to your repository, on a specified repo ```branch``` (usually ```master``` branch).
+**This will not build/deploy a container**, but rather will directly connect your Github repo to Azure App Service on Linux.  This is done through a webhook to Azure App Services, which will trigger Azure App Services to ```pull``` in the new code and reload your web app everytime you ```push``` new code to your repository, on a specified repo ```branch``` (usually ```master``` branch).
 
-- Create new Web App using same App Service Plan
-- Create new local web application using dotnet Core or Node or Python
-- Create initialize a new Git Repo in command line
+- Create new Web App using Linux as the OS and leveraging the same App Service Plan as the previous exercise
+- Create new local (meaning running on local machine) web application using dotnet Core or Node or Python (this part of the excercise is left up to the user as there are lots of articles out there on how to do this)
+- Once you have your application up and running on your local machine, initialize a new Git Repo via the ```git``` command line
 ```:bash
     git init
     git add .
@@ -49,7 +49,7 @@ This will not build/deploy an updated container, but rather will directly connec
     git remote add ...
     git push ...
 ```
-- This will cause App Service to pull in the new code (via a webhook) and mount it into a Run Time Environment (Pre-baked Container for your programming language)
+- This will cause App Service on Linux to pull in the new code (via a webhook) and mount it into a Run Time Environment (Pre-baked Container for your programming language)
 - This method is good for deploying application **code** directly to the App Service.
 
 **Hint:** Click [here](https://docs.microsoft.com/en-us/azure/app-service/app-service-deploy-local-git) if you are having difficulties.

@@ -6,9 +6,9 @@ This lab provides an introduction to Docker along with Kubernetes. It also shows
 
 The purpose of this section is to help you get familar with Kubernetes on Azure. There are a couple of options, Azure Container Service (ACS) which allows for complete control of the environment, and our new Managed Kubernetes Service (AKS) which is in **PREVIEW**. We are going to focus on AKS as that is the future and allows us to focus on deploying ``Applications`` versus managing ``Infrastructure``.
 
+- To make this easier, we are going to leverage the existing Tutorial in Azure Docs. Click [here](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) to navigate to the Docs.
 - The first step is to create the Cluster.
 - The second step is to connect to the Cluster.
-- To make this easier, we are going to leverage the existing Tutorial in Azure Docs. Click [here](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) to navigate to the Docs.
 
 ## 1. Introduction to Kubernetes
 
