@@ -21,7 +21,7 @@ In this section we will leverage https://KataCoda.com and use their interactive 
 
 The purpose of this section is similar to the Web App for Containers first challenge, show how easy it is to get started with Containers in Azure. The difference is that this is ACI which feels more like Serverless, and bills like Serverless, versus Web App for Containers which is PaaS.
 
-- Spin up a Container using ACI via the az cli that is exposed via a Public IP. The az command you want to look at is **container**. A sample command should start with ``az container`` and then add the necessary parameters. One thing to keep in mind, pick a Web Application Image as we are gonig to expose it on a port so it needs to be HTTP accessible.
+- Spin up a Container using ACI via the az cli that is exposed via a Public IP. The az command you want to look at is **container**. A sample command should start with ``az container`` and then add the necessary parameters. One thing to keep in mind, pick a Web Application Image as we are going to expose it on a port so it needs to be HTTP accessible.
 
 **Hint:** Click [here](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart) if you are having difficulties.
 
